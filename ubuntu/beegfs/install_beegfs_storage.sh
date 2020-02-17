@@ -20,7 +20,7 @@ apt update
 wget -q https://www.beegfs.io/release/latest-stable/gpg/DEB-GPG-KEY-beegfs -O- | apt-key add -
 
 # storage service; libbeegfs-ib is only required for RDMA
-install beegfs-storage libbeegfs-ib
+apt install -y beegfs-storage libbeegfs-ib
 
 # run storage service
 /opt/beegfs/sbin/beegfs-setup-storage -p ${BEEGFS_STORAGE_ROOT} -s ${SERVICE_ID} -i ${STORAGE_TARGET_ID} -m ${MGMT_NODE_IP}
