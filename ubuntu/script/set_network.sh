@@ -26,3 +26,11 @@ docker network create \
   --ip-range=172.16.182.0/24 \
   --gateway=172.16.182.1 \
   infi_br0
+  
+
+
+# configure ip tables
+sudo iptables -P FORWARD ACCEPT
+sudo ip route add 172.16.182.0/24 via 192.168.0.182
+sudo ip route add 172.16.188.0/24 via 192.168.0.188
+
