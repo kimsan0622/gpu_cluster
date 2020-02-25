@@ -1,3 +1,5 @@
+
+# macvlan
 export SUBNET=10.0.0.0/8
 export IPRANGE=10.1.0.0/16
 export GW=10.0.0.1
@@ -15,3 +17,12 @@ docker network create -d macvlan \
   --ip-range=10.1.0.0/16 \
   --gateway=10.0.0.1 \
   -o parent=enp96s0f0 dockernet
+
+
+# bridge
+docker network create \
+  --driver=bridge \
+  --subnet=172.16.182.0/24 \
+  --ip-range=172.16.182.0/24 \
+  --gateway=172.16.182.1 \
+  infi_br0
