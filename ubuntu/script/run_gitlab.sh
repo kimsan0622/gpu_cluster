@@ -1,6 +1,8 @@
 export GITLAB_IP=10.1.92.5
 export GITLAB_DIR=/home/airc/gitlab
 
+# gitlab/gitlab-ce:latest
+# gitlab/gitlab-ee:latest
 docker run --detach \
   --network dockernet \
   --ip ${GITLAB_IP} \
