@@ -1,8 +1,9 @@
+export GITLAB_IP=10.1.92.5
 export GITLAB_DIR=/home/airc/gitlab
 
-sudo docker run --detach \
+docker run --detach \
   --network dockernet \
-  --ip 10.1.92.5 \
+  --ip ${GITLAB_IP} \
   --hostname gitlab.airc.com \
   --publish 443:443 --publish 80:80 --publish 22:22 \
   --name gitlab \
